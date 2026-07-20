@@ -5,7 +5,7 @@
 The repository includes the complete official Vim source at commit
 `dd0358ad1e42701f22afbefa0717cc8825cf9f45`.
 
-The paper results were reproduced with 4 x NVIDIA RTX 3090 (24 GiB), driver
+The paper results were reproduced with NVIDIA RTX 3090 (24 GiB), driver
 550.78, Python 3.10.13, PyTorch 2.1.1 + CUDA 11.8, TorchVision 0.16.1, and
 timm 0.6.5. The setup does not depend on a local environment name, project
 path, system CUDA toolkit, or `nvcc`.
