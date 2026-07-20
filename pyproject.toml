@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mldr-kd"
+version = "0.3.0"
+description = "MLDR-KD CIFAR-100 experiments with ResNet students"
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = ["License :: OSI Approved :: MIT License"]
+requires-python = ">=3.10,<3.11"
+dependencies = [
+  "torch==2.1.1",
+  "torchvision==0.16.1",
+  "timm==0.6.5",
+  "numpy==1.26.3",
+  "PyYAML==6.0.3",
+  "tqdm==4.65.2",
+  "huggingface_hub==0.24.3",
+]
+
+[tool.setuptools.packages.find]
+include = ["mldr_kd*"]

@@ -1,0 +1,52 @@
+seed: 42
+data_dir: ./data/cifar100
+output_dir: ./outputs/cifar100_resnet18_vim_small
+
+dataset: cifar100
+num_classes: 100
+image_size: 224
+
+student: resnet18
+teacher: vim_small_patch16_224_bimambav2_final_pool_mean_abs_pos_embed_with_midclstok_div2
+teacher_checkpoint: ./weights/Vison_Mamba_Small_cirfa100.pth.tar
+vim_model_dir: ./third_party/Vim/vim
+
+epochs: 300
+batch_size: 128
+workers: 4
+optimizer: sgd
+learning_rate: 0.05
+min_learning_rate: 0.001
+momentum: 0.9
+nesterov: true
+weight_decay: 0.002
+scheduler: cosine
+warmup_epochs: 3
+warmup_learning_rate: 0.0001
+
+label_smoothing: 0.1
+color_jitter: 0.0
+auto_augment: null
+train_interpolation: random
+validation_interpolation: bilinear
+random_erasing: 0.0
+mixup: 0.0
+cutmix: 0.0
+
+temperature: 1.0
+alpha: 2.0
+ce_loss_weight: 1
+logit_distill_weight: 1
+stage_distill_weight: 1
+fused_distill_weight: 1
+
+project_dim: auto
+gate_hidden_dim: auto
+
+amp: false
+save_every: 25
+
+paper_table: 2
+paper_student_from_scratch_top1: 74.01
+paper_teacher_top1: 87.89
+paper_mldr_kd_top1: 80.23

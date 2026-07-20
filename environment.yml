@@ -1,0 +1,8 @@
+# Conda provides only Python tooling. Run scripts/create_environment.sh to
+# install the verified PyTorch CUDA wheel and the project dependencies.
+name: mldr-kd
+channels:
+  - defaults
+dependencies:
+  - python=3.10.13
+  - pip=24.0

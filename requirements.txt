@@ -1,0 +1,7 @@
+# PyTorch and TorchVision are installed from the official cu118 index by
+# scripts/create_environment.sh.
+timm==0.6.5
+numpy==1.26.3
+PyYAML==6.0.3
+tqdm==4.65.2
+huggingface_hub==0.24.3
